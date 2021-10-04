@@ -95,3 +95,9 @@ trabalhar na página editar cliente->{
 		colocar uma cor vermelha
 	}
 }
+
+----------------------------------- AULA 6/8
+
+colocar as tabelas na página controle financeiro
+
+habilitar botão quitar divida

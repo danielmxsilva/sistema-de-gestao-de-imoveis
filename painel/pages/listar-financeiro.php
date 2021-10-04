@@ -33,7 +33,9 @@
 			@$urlId = (int)$_GET['id'];
 			if(isset($urlId)){
 				$sql = Mysql::conectar()->prepare("SELECT * FROM `tb_admin.financeiro` WHERE cliente_id = $urlId AND status = 0 ORDER BY vencimento ASC");
-			}else{
+			}
+
+			if($_GET['url'] == 'controle-financeiro'){
 				$sql = Mysql::conectar()->prepare("SELECT * FROM `tb_admin.financeiro` WHERE status = 0 ORDER BY vencimento ASC");
 			}
 				$sql->execute();
