@@ -76,7 +76,7 @@
 
 				<div class="box-btn">
 
-					<a href="<?php echo INCLUDE_PATH_PAINEL?>editar-clientes?id=<?php echo $value['id']?>"><img src="img/editar-depoimento-verde.png">Editar
+					<a href="<?php echo INCLUDE_PATH_PAINEL?>editar-clientes?id=<?php echo $value['id']?>"><img src="img/editar-depoimento-verde.png">Gestão
 					</a>
 
 					<a <?php

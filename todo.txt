@@ -78,3 +78,20 @@ fazer sistema de validação de data, não permitir colocar uma data de vencimen
 Puxar do banco de dados os valores do financeiro com pagamentos pendentes 
 
 puxar somente parcelas deste cliente, ordenar por data crescente
+
+
+----------------------------------- AULA 5/8
+
+trabalhar na página editar cliente->{
+	2 botão-> no th{
+		-enviar e-mail
+		-marcar como pago
+	}
+	2 botão-> no td{
+		-pegar o botão de editar e deletar e colar aqui
+		-stilizar os botões
+	}
+	fazer validação pra ver se está vencido{
+		colocar uma cor vermelha
+	}
+}

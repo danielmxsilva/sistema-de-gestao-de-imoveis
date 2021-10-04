@@ -110,16 +110,30 @@
 			$intervalo = $_POST['intervalo'];
 			$status = 0;
 
-			for($i = 0; $i < $parcela; $i++){
-				$vencimento = strtotime($vencimentoOriginal) + (($i * $intervalo) *(60*60*24));
-				$sql = Mysql::conectar()->prepare("INSERT INTO `tb_admin.financeiro` VALUES(null,?,?,?,?,?,?)");
-				$sql->execute(array($cliente_id,$nome,$valor,date('Y-m-d',$vencimento),$intervalo,$status));
-					
+			if($vencimentoOriginal < date('Y-m-d')){
+				Painel::alert("erro",'Não é possivel adicionar um pagamento com data negativa!');	
+			}else{
+				if($intervalo == null){
+				$intervalo = 0;
+					for($i = 0; $i < $parcela; $i++){
+						$vencimento = strtotime($vencimentoOriginal) + (($i * $intervalo) *(60*60*24));
+						$sql = Mysql::conectar()->prepare("INSERT INTO `tb_admin.financeiro` VALUES(null,?,?,?,?,?,?)");
+						$sql->execute(array($cliente_id,$nome,$valor,date('Y-m-d',$vencimento),$intervalo,$status));		
+					}
+				}else{
+					for($i = 0; $i < $parcela; $i++){
+						$vencimento = strtotime($vencimentoOriginal) + (($i * $intervalo) *(60*60*24));
+						$sql = Mysql::conectar()->prepare("INSERT INTO `tb_admin.financeiro` VALUES(null,?,?,?,?,?,?)");
+						$sql->execute(array($cliente_id,$nome,$valor,date('Y-m-d',$vencimento),$intervalo,$status));		
+					}
+				}
+				
+
+				Painel::alert("sucesso",'Pagamento Adicionado com Sucesso!');
 			}
 
-			Painel::alert("sucesso",'Pagamento Adicionado com Sucesso!');			
-
 		}
+
 	?>
 
 	<div class="form-editar">

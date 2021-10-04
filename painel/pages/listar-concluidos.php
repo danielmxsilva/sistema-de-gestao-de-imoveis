@@ -9,16 +9,31 @@
 				<th>Cliente</th>
 				<th>Valor</th>
 				<th>Vencimento</th>
-				<th style="width: 2%;">#</th>
 			</thead>
 
-			<tbody>
-				<td>Loren</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>				
+			
+			<?php
+			@$urlId = (int)$_GET['id'];
+			if(isset($urlId)){
+				$sql = Mysql::conectar()->prepare("SELECT * FROM `tb_admin.financeiro` WHERE cliente_id = $urlId AND status = 1 ORDER BY vencimento ASC");
+			}else{
+				$sql = Mysql::conectar()->prepare("SELECT * FROM `tb_admin.financeiro` WHERE status = 1 ORDER BY vencimento ASC");
+			}
+				$sql->execute();
+				$pendentes = $sql->fetchAll();
+				foreach($pendentes as $key => $value) {
+					$nomeCliente = Mysql::conectar()->prepare("SELECT `nome` FROM `tb_admin.clientes` WHERE id = $value[cliente_id]");
+					$nomeCliente->execute();
+					$nomeCliente = $nomeCliente->fetch()['nome'];
+			?>
+			<tbody>		
+				<td><?php echo $value['nome']; ?></td>
+				<td><?php echo $nomeCliente; ?></td>
+				<td><?php echo $value['valor']; ?></td>
+				<td><?php echo date('d/m/Y',strtotime($value['vencimento'])); ?></td>
 			</tbody>
+			<?php }?>	
+			
 
 		</table>
 	</div><!--table-wraper-->
