@@ -10,6 +10,7 @@
 	<title>Painel</title>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/zebra_datepicker@latest/dist/css/default/zebra_datepicker.min.css" rel="stylesheet">
 	<link href="<?php echo INCLUDE_PATH_PAINEL;?>css/style.css" rel="stylesheet">
 	<link href="<?php echo INCLUDE_PATH_PAINEL;?>img/icone-painel.png" type="image-x/png" rel="shortcut icon">
 	<script src="https://cdn.tiny.cloud/1/4rtcsu1dd5h9dkf6r4vb5vb9df9ke21mllpfl0wbir3dufjl/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
@@ -135,6 +136,9 @@
 	<script src="<?php echo INCLUDE_PATH?>js/jquery.js"></script>
 	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/fade-menu.js"></script>
 	<script src="<?php echo INCLUDE_PATH?>js/jquery.mask.js"></script>
+	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/jquery.maskMoney.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/zebra_datepicker@latest/dist/zebra_datepicker.min.js"></script>
+	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/controleFinanceiro.js"></script>
 	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/jquery.ajaxform.js"></script>
 	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/helperMask.js"></script>
 	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/ajax.js"></script>

@@ -636,6 +636,14 @@ aside a:hover{
 	font-size: 15px;
 }
 
+span.Zebra_DatePicker_Icon_Wrapper{
+	width: 150px !important;
+}
+
+span.Zebra_DatePicker_Icon_Wrapper input{
+	width: 150px;
+}
+
 .form-group input,select,textarea,.group-depoimento input,textarea,.group-depoimento select{
 	font-size: 15px;
 	padding: 8px;

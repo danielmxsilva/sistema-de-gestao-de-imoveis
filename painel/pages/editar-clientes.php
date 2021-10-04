@@ -103,12 +103,20 @@
 	<div class="form-editar">
 		<form method="POST">
 			<div class="form-group">
-				<span>Valor:</span>
+				<span>Nome:</span>
 				<input type="text" name="nome" required value="">
 			</div><!--from-group-->
 			<div class="form-group">
+				<span>Valor:</span>
+				<input type="text" name="valor" required value="">
+			</div><!--from-group-->
+			<div class="form-group">
 				<span>Parcela:</span>
-				<input type="text" name="email" required value="">
+				<input type="text" name="parcelas" required value="">
+			</div><!--from-group-->
+			<div class="form-group">
+				<span>Venc.:</span>
+				<input type="text" name="vencimento" required>
 			</div><!--from-group-->
 			<div class="form-group">
 				<input <?php permissaoInput(1,'acao_editar','Inserir')?>>
@@ -120,3 +128,5 @@
 </div><!--box-content-->
 
 <?php include("listar-financeiro.php")?>
+
+<?php include("listar-concluidos.php")?>

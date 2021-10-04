@@ -22,3 +22,30 @@ em baixo deste formulario->{
 	-h2 pagamentos
 	-pegar tabela nome do pagamento
 }
+
+----------------------------------- AULA 2/8
+
+Adicionar uma nova coluna na tabela depois de cliente id->{
+	-nome-255
+	-status-int
+}
+
+vou criar um arquivo de js só para o financeiro->{
+	-então vou pegar meu loadJs e carregar dinamicamente o /controleFinanceiro.js/
+}
+
+Trabalhando no controleFinanceiro.js->{
+	-Colocar mascara no numero de parcelas até 99
+	-Download do plugin maskMoney, colocar no formato de Real
+	-Colocar o plugin de calendario no vencimento "https://github.com/stefangabos/Zebra_Datepicker"
+}
+
+ir na página de editar clientes->{
+	-vão ser 2 tabelas 1->pagamentos pendentes 2->pagamentos concluidos
+}
+
+ir na página de visualizar pagamentos->{
+	-vão ser 2 tabelas 1->pagamentos pendentes 2->pagamentos concluidos
+}
+
+----------------------------------- AULA 3/8
