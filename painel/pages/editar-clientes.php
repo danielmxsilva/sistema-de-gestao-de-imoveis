@@ -100,6 +100,28 @@
 	<img src="<?php echo INCLUDE_PATH_PAINEL;?>img/lapis.png">
 	<h2>Adicionar Pagamento</h2>
 
+	<?php
+		if(isset($_POST['acao_inserir'])){
+			$cliente_id = $id;
+			$nome = $_POST['nome'];
+			$valor = $_POST['valor'];
+			$parcela = $_POST['parcelas'];
+			$vencimentoOriginal = $_POST['vencimento'];
+			$intervalo = $_POST['intervalo'];
+			$status = 0;
+
+			for($i = 0; $i < $parcela; $i++){
+				$vencimento = strtotime($vencimentoOriginal) + (($i * $intervalo) *(60*60*24));
+				$sql = Mysql::conectar()->prepare("INSERT INTO `tb_admin.financeiro` VALUES(null,?,?,?,?,?,?)");
+				$sql->execute(array($cliente_id,$nome,$valor,date('Y-m-d',$vencimento),$intervalo,$status));
+					
+			}
+
+			Painel::alert("sucesso",'Pagamento Adicionado com Sucesso!');			
+
+		}
+	?>
+
 	<div class="form-editar">
 		<form method="POST">
 			<div class="form-group">
@@ -119,7 +141,11 @@
 				<input type="text" name="vencimento" required>
 			</div><!--from-group-->
 			<div class="form-group">
-				<input <?php permissaoInput(1,'acao_editar','Inserir')?>>
+				<span>Intervalo:</span>
+				<input type="text" name="intervalo" value="">
+			</div><!--from-group-->
+			<div class="form-group">
+				<input <?php permissaoInput(1,'acao_inserir','Inserir')?>>
 			
 			</div><!--from-group-->
 		</form>

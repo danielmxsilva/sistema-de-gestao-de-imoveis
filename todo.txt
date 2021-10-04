@@ -49,3 +49,26 @@ ir na página de visualizar pagamentos->{
 }
 
 ----------------------------------- AULA 3/8
+
+No arquivo editar-cliente adicionar o campo intervalo
+
+Adicionar um php no formulario de adicionar pagamentos->{
+	client_id vou pegar o id da página
+	nome
+	valor
+	vencimentoOriginal
+	intervalo
+	numero_parcelas
+	status padrão é 0
+}
+
+vou rodar um loping for em numero_parcelas
+
+A logica dentro do loping vai ser a seguinte
+
+$vencimento = strtotime($vencimentoOriginal) + (($i * $numero_parcelas) * (60*60*24));
+
+inserir no banco de dados os valores de resultados
+
+
+----------------------------------- 

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('[name=parcelas]').mask('99');
+	$('[name=parcelas],[name=intervalo]').mask('99');
 	$('[name=valor]').maskMoney({
          prefix: "R$:",
          decimal: ",",
