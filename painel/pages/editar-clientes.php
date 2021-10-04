@@ -95,3 +95,28 @@
 	</div><!--form-editar-->
 
 </div><!--box-content-->
+
+<div class="box-content">
+	<img src="<?php echo INCLUDE_PATH_PAINEL;?>img/lapis.png">
+	<h2>Adicionar Pagamento</h2>
+
+	<div class="form-editar">
+		<form method="POST">
+			<div class="form-group">
+				<span>Valor:</span>
+				<input type="text" name="nome" required value="">
+			</div><!--from-group-->
+			<div class="form-group">
+				<span>Parcela:</span>
+				<input type="text" name="email" required value="">
+			</div><!--from-group-->
+			<div class="form-group">
+				<input <?php permissaoInput(1,'acao_editar','Inserir')?>>
+			
+			</div><!--from-group-->
+		</form>
+	</div><!--form-editar-->
+
+</div><!--box-content-->
+
+<?php include("listar-financeiro.php")?>

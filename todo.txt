@@ -1,0 +1,24 @@
+titulo de guia->Controle Financeiro, dois submenus->{
+	1-visualizar pagamentos, pro arquivo controle-financeiro->pegar o gerenciar-categorias ctrl+c,ctrl+v
+	2->fazer a tabela com nome do pagamento,cliente,valor,vencimento,#
+}
+
+criar nova tabela->tb_admin.financeiro->{
+	id->AI
+	cliente_id->INT
+	valor->varchar,255
+	vencimento->DATE
+}
+
+ir na página de editar-cliente e adicionar um bloco de adicionar pagamentos->{
+	-form
+	-valor do pagamento
+	-numero de parcelas
+	-inserir pagamento
+}
+
+em baixo deste formulario->{
+	-adicionar a tabela de visualizar pagamentos
+	-h2 pagamentos
+	-pegar tabela nome do pagamento
+}

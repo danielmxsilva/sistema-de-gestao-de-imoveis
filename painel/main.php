@@ -115,6 +115,10 @@
 			<a href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-clientes">Cadastrar Clientes</a>
 			<a href="<?php echo INCLUDE_PATH_PAINEL?>gerenciar-clientes">Gerenciar Clientes</a>
 		</div>
+		<div class="gestao-aside">
+			<h2 class="gestao-adm">Controle Financeiro</h2>
+			<a href="<?php echo INCLUDE_PATH_PAINEL?>controle-financeiro">Controle Financeiro</a>
+		</div>
 	</aside>
 
 	<div class="wraper-content">
