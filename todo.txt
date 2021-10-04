@@ -71,4 +71,10 @@ $vencimento = strtotime($vencimentoOriginal) + (($i * $numero_parcelas) * (60*60
 inserir no banco de dados os valores de resultados
 
 
------------------------------------ 
+----------------------------------- AULA 4/8
+
+fazer sistema de validação de data, não permitir colocar uma data de vencimento menor que a data de hoje
+
+Puxar do banco de dados os valores do financeiro com pagamentos pendentes 
+
+puxar somente parcelas deste cliente, ordenar por data crescente
