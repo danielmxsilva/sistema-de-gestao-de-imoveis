@@ -1,0 +1,14 @@
+fazer a página cadastrar-empreendimento->{
+	-nome-input
+	-tipo-select
+	-preço-mascara
+	-imagem
+}
+
+ir no banco de dados e criar a tabela tb_admin.empreendimentos->{
+	-id AI
+	-nome varchar
+	-tipo varchar
+	-preco varchar
+	-imagem varchar
+}

@@ -125,6 +125,10 @@
 			<a href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-produto">Cadastrar Produto</a>
 			<a href="<?php echo INCLUDE_PATH_PAINEL?>visualizar-produtos">Visualizar Produtos</a>
 		</div>
+		<div class="gestao-aside">
+			<h2 class="gestao-adm">Gestão de Imoveis</h2>
+			<a href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-empreendimento">Cadastrar Empreendimento</a>
+		</div>
 	</aside>
 
 	<div class="wraper-content">
