@@ -12,3 +12,14 @@ ir no banco de dados e criar a tabela tb_admin.empreendimentos->{
 	-preco varchar
 	-imagem varchar
 }
+
+
+----------------------- AULA 2/8
+
+Fazendo o cadastro do empreendimento no banco->{
+	-pegar os valores do formulário
+	-verificar se a imagem foi adicionada
+	-se foi adicionada verificar se a imagem é valida
+	-subir a imagem
+	-adicionar o conteudo ao banco de dados
+}
