@@ -21,8 +21,10 @@
 					Painel::alert("erro","A imagem não é valida por favor Selecione imagens do tipo PNG,JPG ou JPEG");
 				}else{
 					$idImagem = Painel::uploadFile($imagem);
-					$sql = Mysql::conectar()->prepare("INSERT INTO `tb_admin.empreendimentos` VALUES(null,?,?,?)");
-					$sql->execute(array($nome,$tipo,$idImagem));
+					$sql = Mysql::conectar()->prepare("INSERT INTO `tb_admin.empreendimentos` VALUES(null,?,?,?,?)");
+					$sql->execute(array($nome,$tipo,$idImagem,0));
+					$lastId = Mysql::conectar()->lastInsertId();
+					$sql = Mysql::conectar()->exec("UPDATE `tb_admin.empreendimentos` SET order_id = $lastId  WHERE id = $lastId");
 					Painel::alert("sucesso","O cadastro do empreendimento foi feito com sucesso!");
 				}
 			}

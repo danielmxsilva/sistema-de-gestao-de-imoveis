@@ -23,3 +23,25 @@ Fazendo o cadastro do empreendimento no banco->{
 	-subir a imagem
 	-adicionar o conteudo ao banco de dados
 }
+
+----------------------- AULA 3/8
+
+
+Fazendo sistema de ordenação de tabela com ajax(Arrastando e soltando)->{
+	-ir no banco de dados->na tabela tb_admin.empreendimento e adicionar order_id na tabela
+	-adicionar um lastId no order_id
+}
+
+Criando novo link no menu do painel->{
+	-Listar empreendimentos->pagina listar-empreendimentos
+	-Pegar conteudo da página visualizar produtos e adaptar
+	-Deletar empreendimento
+	-Buscar empreendimento
+}
+
+Adicionar jqueryui no meu site->{
+	-jqueryui.com
+	-stable(download)
+	-copiar os arquivos jquery-ui.min/css/js
+	-copiar as images do jquery-ui, criar uma pasta no painel chamada de images e colar as fotos
+}
