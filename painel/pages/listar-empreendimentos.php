@@ -79,13 +79,13 @@
 				$imagemSingle = $imagemSingle->fetch()['imagem'];
 		?>
 
-		<div class="box-single-wraper">
+		<div id="item-<?php echo $value['id']?>" class="box-single-wraper">
 
 			<div class="box-single">
 
 				<div class="box-topo">
 
-					<img style="width: 50%;height: 90px;border-radius: unset;" src="<?php echo INCLUDE_PATH_PAINEL?>uploads/<?php echo $imagemSingle?>">
+					<img style="width: 100%;height: 170px;border-radius: unset;" src="<?php echo INCLUDE_PATH_PAINEL?>uploads/<?php echo $imagemSingle?>">
 	
 				</div><!--box-topo-->
 

@@ -45,3 +45,30 @@ Adicionar jqueryui no meu site->{
 	-copiar os arquivos jquery-ui.min/css/js
 	-copiar as images do jquery-ui, criar uma pasta no painel chamada de images e colar as fotos
 }
+
+----------------------- AULA 4/8
+
+Criar o botão visualizar empreendimento->{
+	-Pagina visualizar empreendimento
+}
+
+Colocar borda traçada na box quando começar o evento então->{
+	-start:function(){ var el = $(this); el.find(".box-single-wraper > div:nth-of-type(1).css('border','2px dashed #ccc')")},
+	-update:function()>>>
+}
+
+Pegar a ordem que ficou as boxes dps de mover->{
+	-event,ui - como parametro e->var data = $(this).sortable('serialize');
+	-colocar o item id em cada box
+}
+
+Fazendo o update no banco de dados->{
+	vou fazer via ajax
+	$.ajax({
+		url: '',
+		method: 'post',
+		data: data
+	}).done(function(data){
+		console.log(data);
+	})
+}
