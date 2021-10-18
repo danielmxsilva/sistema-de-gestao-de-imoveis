@@ -72,3 +72,12 @@ Fazendo o update no banco de dados->{
 		console.log(data);
 	})
 }
+
+----------------------- AULA 5/8
+
+Criar a página visualizar empreendimento->{
+	fazer verificação se existe um parametro id
+}
+
+APLICANDO ROTAS
+
