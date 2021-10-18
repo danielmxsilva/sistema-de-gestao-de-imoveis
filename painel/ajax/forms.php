@@ -112,9 +112,18 @@
 		@unlink('../uploads/'.$foto);
 		Mysql::conectar()->exec("DELETE FROM `tb_admin.clientes` WHERE id = $id");
 		Mysql::conectar()->exec("DELETE FROM `tb_admin.financeiro` WHERE cliente_id = $id");
+	}else if(isset($_POST['tipo_acao']) && $_POST['tipo_acao'] == 'ordenar_empreendimentos'){
+		$ids = $_POST['item'];
+
+		$i = 0;
+		foreach($ids as $key => $value){
+			$sql = Mysql::conectar()->exec("UPDATE `tb_admin.empreendimentos` SET order_id = $i WHERE id = $value");
+			$i++;
+		}
+
+
 	}
 
-	echo 'Tudo certo!';
 
 	die(json_encode($data));
 

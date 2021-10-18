@@ -66,7 +66,7 @@
 			}else{
 				$query2 = "";
 			}
-			$sql = Mysql::conectar()->prepare("SELECT * FROM `tb_admin.empreendimentos` $query $query2");
+			$sql = Mysql::conectar()->prepare("SELECT * FROM `tb_admin.empreendimentos` $query $query2 ORDER BY order_id ASC");
 			$sql->execute();
 			$produto = $sql->fetchAll();
 			if($query != ''){
