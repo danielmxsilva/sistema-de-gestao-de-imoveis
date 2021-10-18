@@ -152,6 +152,17 @@
 			return $sql->fetch();
 		}
 
+		public static function selectQuery($tabela,$query = '',$arr = ''){
+			if($query != false){
+				$sql = Mysql::conectar()->prepare("SELECT * FROM `$tabela` WHERE $query");
+				$sql->execute($arr);
+			}else{
+				$sql = Mysql::conectar()->prepare("SELECT * FROM `$tabela`");
+				$sql->execute();
+			}
+			return $sql->fetchAll();
+		}
+
 		public static function insert($arr){
 			$certo = true;
 			$nome_tabela = $arr['nome_tabela'];

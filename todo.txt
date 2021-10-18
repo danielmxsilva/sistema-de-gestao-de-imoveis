@@ -1,4 +1,4 @@
-fazer a página cadastrar-empreendimento->{
+vfazer a página cadastrar-empreendimento->{
 	-nome-input
 	-tipo-select
 	-preço-mascara
@@ -81,8 +81,6 @@ Criar a página visualizar empreendimento->{
 
 APLICANDO ROTAS
 
------------------------ AULA 6/8
-
 Recuperar o id da URL
 
 Puxar do banco as informações do id
@@ -90,3 +88,40 @@ Puxar do banco as informações do id
 Fazer uma box de apresentação
 
 ir no ajax e tirar o evento que se soltar a box a borda sai do pontilhado
+
+----------------------- AULA 6/8
+
+Criar tabela de imoveis->tb_admin.imoveis->{
+	-id(AI)
+	-empreendimento_id(INT)
+	-nome(VARCHAR)
+	-preço(VARCHAR)
+	-area(INT)
+}
+
+Criar tabela de imoveis->tb_admin.imagens_imoveis->{
+	-id(AI)
+	-imovel_id(INT)
+	-imagem(VARCHAR)
+}
+
+Fazer o front-end do listar-imoveis
+
+Fazer o front-end do cadastro de imoveis
+
+----------------------- AULA 7/8
+
+pegar o php do cadastrar produtos->{
+	fazer a validação certa dos campos
+	fazer o upload das imagens
+	fazer o cadastro no banco
+}
+
+Listar todos os imoveis->{
+	pegaImoveis->banco de dados com o selectAll
+	rodar o looping e pegar os dados
+}
+
+Listando imoveis do empreendimento->{
+	alterar método select, para me retornar fetchAll
+}
