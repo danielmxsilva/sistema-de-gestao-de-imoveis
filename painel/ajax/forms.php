@@ -114,6 +114,8 @@
 		Mysql::conectar()->exec("DELETE FROM `tb_admin.financeiro` WHERE cliente_id = $id");
 	}
 
+	echo 'Tudo certo!';
+
 	die(json_encode($data));
 
 ?>
