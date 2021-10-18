@@ -81,3 +81,12 @@ Criar a página visualizar empreendimento->{
 
 APLICANDO ROTAS
 
+----------------------- AULA 6/8
+
+Recuperar o id da URL
+
+Puxar do banco as informações do id
+
+Fazer uma box de apresentação
+
+ir no ajax e tirar o evento que se soltar a box a borda sai do pontilhado

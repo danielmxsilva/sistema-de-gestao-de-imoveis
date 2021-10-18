@@ -990,6 +990,37 @@ a.pag-selected{
 	text-align: center;
 }
 
+.wraper10{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row3{
+	width: 30%;
+}
+
+.row3 img{
+	width: 100%;
+	border: 3px solid #57889C;
+}
+
+.row7{
+	padding: 0 10px;
+	width: 70%;
+}
+
+.row7 p{
+	color: gray;
+}
+
+h2.title-blue{
+	background-color: #57889C;
+	color: white;
+	font-size: 15px;
+	padding: 5px;
+}
+
 @media screen and (max-width: 800px){
 	header{
 		height: 120px;
@@ -1037,6 +1068,14 @@ a.pag-selected{
 
 	.box-single-wraper{
 		width: 50%;
+	}
+
+	.row3{
+		width: 100%;
+	}
+	.row7{
+		margin: 10px 0;
+		width: 100%;
 	}
 }
 
