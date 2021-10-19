@@ -150,7 +150,6 @@
 				<th>Nome</th>
 				<th>Preço</th>
 				<th class="btn-green">Editar</th>
-				<th class="btn-red">Deletar</th>
 			</thead>
 		<?php
 			$pegaImovel = Painel::selectQuery('tb_admin.imoveis','empreendimento_id=?',array($id));
@@ -160,21 +159,8 @@
 				<td>Imovel: <?php echo $value['nome']?></td>
 				<td>Preço: R$ <?php echo $value['preco']?></td>
 				<td class="tb-editar">
-						<a href="<?php echo INCLUDE_PATH_PAINEL?>editar-categorias?id=<?php echo $value['id']?>"><img src="img/editar-depoimento-verde.png"></a>
+						<a href="<?php echo INCLUDE_PATH_PAINEL?>editar-imovel?id=<?php echo $value['id']?>"><img src="img/editar-depoimento-verde.png"></a>
 				</td>
-				<td class="tb-excluir">
-						<a <?php
-							if($_SESSION['cargo'] >= 1){
-						  ?>
-						  actionBtn="delete" href="<?php echo INCLUDE_PATH_PAINEL?>gerenciar-categorias?excluir=<?php echo $value["id"]?>"
-						  <?php }else{ ?> 
-						  	actionBtn="negado" href="#"
-						  <?php } ?>
-						  >
-
-						<img src='img/excluir-depoimento-red.png'></a>
-					</td>
-
 			</tbody>
 		<?php } ?>
 		</table>

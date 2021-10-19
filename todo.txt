@@ -125,3 +125,12 @@ Listar todos os imoveis->{
 Listando imoveis do empreendimento->{
 	alterar método select, para me retornar fetchAll
 }
+
+----------------------- AULA 8/8
+
+Fazer a página editar-imovel.php->Modelo editar-produto->{
+	deletar o post acao
+	adaptar o resto a minha página
+	deletar a foto
+	deletar o imovel
+}

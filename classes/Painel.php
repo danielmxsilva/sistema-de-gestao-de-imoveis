@@ -131,6 +131,10 @@
 			die();
 		}
 
+		public static function alertJs($msg){
+			echo '<script>alert("'.$msg.'")</script>';
+		}
+
 		public static function selectAll($tabela,$start = null,$end = null){
 			if($start == null && $end == null){
 				$sql = Mysql::conectar()->prepare("SELECT * FROM `$tabela` ORDER BY order_id ASC");

@@ -37,11 +37,25 @@
 			$id = (int)$_GET['deletar'];
 			$imagens = Mysql::conectar()->prepare("SELECT * FROM `tb_admin.empreendimentos` WHERE id = $id");
 			$imagens->execute();
-			$imagens = $imagens->fetch()['imagem'];
+			$imagens = $imagens->fetch();
 
-			@unlink(BASE_DIR_PAINEL.'/uploads/'.$imagens);
+			@unlink(BASE_DIR_PAINEL.'/uploads/'.$imagens['imagem']);
 
-			$sql = Mysql::conectar()->exec("DELETE FROM `tb_admin.empreendimentos` WHERE id = $id");
+			$imoveis = Mysql::conectar()->prepare("SELECT * FROM `tb_admin.imoveis` WHERE empreendimento_id = $id");
+			$imoveis->execute();
+			$imoveis = $imoveis->fetchAll();
+
+			foreach ($imoveis as $key => $value) {
+				$imagens = Mysql::conectar()->prepare("SELECT * FROM `tb_admin.imagens_imoveis` WHERE imovel_id = $value[id]");
+				$imagens->execute();
+				$imagens = $imagens->fetchAll();
+				foreach ($imagens as $key2 => $value2) {
+					@unlink(BASE_DIR_PAINEL.'/uploads/'.$value2['imagem']);
+					Mysql::conectar()->exec("DELETE FROM `tb_admin.imagens_imoveis` WHERE id = $value2[id]");
+				}
+			}
+			Mysql::conectar()->exec("DELETE FROM `tb_admin.imoveis` WHERE empreendimento_id = $id");
+			Mysql::conectar()->exec("DELETE FROM `tb_admin.empreendimentos` WHERE id = $id");
 			Painel::alert("sucesso","Empreendimento deletado com sucesso!");
 		}
 
